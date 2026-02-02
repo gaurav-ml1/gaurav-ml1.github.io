@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Developer Roadmap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🚀 Full Stack Roadmap</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Your Journey to Full Stack Mastery</h1>
+            <p class="subtitle">An interactive roadmap to becoming a complete Full Stack Developer</p>
+            <a href="roadmap.html" class="btn">Start Your Journey</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>What You'll Master</h2>
+            <div class="feature-grid">
+                <div class="feature-card interactive-card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="icon">🎨</div>
+                            <h3>Frontend</h3>
+                            <p>Master HTML, CSS, JavaScript, React, and modern UI frameworks</p>
+                            <span class="click-hint">Click to explore</span>
+                        </div>
+                        <div class="card-back">
+                            <h4>Frontend Stack</h4>
+                            <ul>
+                                <li>✓ HTML5 & CSS3</li>
+                                <li>✓ JavaScript ES6+</li>
+                                <li>✓ React / Vue / Angular</li>
+                                <li>✓ Tailwind / Bootstrap</li>
+                                <li>✓ TypeScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card interactive-card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="icon">⚙️</div>
+                            <h3>Backend</h3>
+                            <p>Build powerful servers with Node.js, Python, databases, and APIs</p>
+                            <span class="click-hint">Click to explore</span>
+                        </div>
+                        <div class="card-back">
+                            <h4>Backend Stack</h4>
+                            <ul>
+                                <li>✓ Node.js / Python</li>
+                                <li>✓ Express / Django</li>
+                                <li>✓ REST APIs</li>
+                                <li>✓ SQL & NoSQL DBs</li>
+                                <li>✓ Authentication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card interactive-card" onclick="this.classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="icon">☁️</div>
+                            <h3>DevOps</h3>
+                            <p>Deploy, scale, and maintain applications in the cloud</p>
+                            <span class="click-hint">Click to explore</span>
+                        </div>
+                        <div class="card-back">
+                            <h4>DevOps Stack</h4>
+                            <ul>
+                                <li>✓ Git & GitHub</li>
+                                <li>✓ Docker</li>
+                                <li>✓ AWS / Azure / GCP</li>
+                                <li>✓ CI/CD Pipelines</li>
+                                <li>✓ Kubernetes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2>Your Progress Tracker</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Skills to Master</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Months Journey</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Projects to Build</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Job Ready</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Full Stack Roadmap. Your journey to mastery starts here! 🚀</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animated counter for stats
+        function animateCounter() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+
+        // Trigger animation when stats section is visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+    </script>
+</body>
+</html>

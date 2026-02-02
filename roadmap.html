@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Roadmap - Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🚀 Full Stack Roadmap</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="roadmap.html" class="active">Roadmap</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Full Stack Developer Roadmap</h1>
+            <p>Click on any skill to mark it as completed and track your progress</p>
+        </div>
+    </section>
+
+    <section class="roadmap-section">
+        <div class="container">
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <h3>Your Overall Progress: <span id="progress-percent">0%</span></h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <button class="reset-btn" onclick="resetProgress()">Reset Progress</button>
+            </div>
+
+            <!-- Phase 1: Foundations -->
+            <div class="roadmap-phase">
+                <h2 class="phase-title">🌱 Phase 1: Foundations (2-3 months)</h2>
+                <div class="skills-container">
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>HTML5</h4>
+                            <p>Structure and semantics of web pages</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>CSS3</h4>
+                            <p>Styling, layouts, animations, Flexbox, Grid</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>JavaScript Basics</h4>
+                            <p>Variables, functions, loops, DOM manipulation</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Git & GitHub</h4>
+                            <p>Version control, repositories, collaboration</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Command Line Basics</h4>
+                            <p>Terminal navigation and basic commands</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Responsive Design</h4>
+                            <p>Media queries, mobile-first approach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 2: Frontend -->
+            <div class="roadmap-phase">
+                <h2 class="phase-title">⚛️ Phase 2: Frontend Mastery (3-4 months)</h2>
+                <div class="skills-container">
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>JavaScript ES6+</h4>
+                            <p>Arrow functions, async/await, destructuring, modules</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>React / Vue / Angular</h4>
+                            <p>Component-based architecture, state management</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>TypeScript</h4>
+                            <p>Type safety, interfaces, generics</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>CSS Frameworks</h4>
+                            <p>Tailwind CSS, Bootstrap, Material UI</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>State Management</h4>
+                            <p>Redux, Context API, Zustand, Recoil</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Build Tools</h4>
+                            <p>Webpack, Vite, npm/yarn</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Testing</h4>
+                            <p>Jest, React Testing Library, Cypress</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 3: Backend -->
+            <div class="roadmap-phase">
+                <h2 class="phase-title">⚙️ Phase 3: Backend Development (3-4 months)</h2>
+                <div class="skills-container">
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Node.js & Express</h4>
+                            <p>Server-side JavaScript, REST APIs, middleware</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Python & Django/Flask</h4>
+                            <p>Alternative backend language and frameworks</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>SQL Databases</h4>
+                            <p>PostgreSQL, MySQL, database design</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>NoSQL Databases</h4>
+                            <p>MongoDB, Redis, database selection</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Authentication & Security</h4>
+                            <p>JWT, OAuth, bcrypt, security best practices</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>API Design</h4>
+                            <p>RESTful APIs, GraphQL, API documentation</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>WebSockets</h4>
+                            <p>Real-time communication, Socket.io</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Testing</h4>
+                            <p>Unit tests, integration tests, Mocha, Jest</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phase 4: DevOps -->
+            <div class="roadmap-phase">
+                <h2 class="phase-title">☁️ Phase 4: DevOps & Deployment (2-3 months)</h2>
+                <div class="skills-container">
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Docker</h4>
+                            <p>Containerization, Docker Compose, images</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Cloud Platforms</h4>
+                            <p>AWS, Azure, Google Cloud Platform basics</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>CI/CD</h4>
+                            <p>GitHub Actions, Jenkins, automated deployment</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Nginx / Apache</h4>
+                            <p>Web servers, reverse proxy, load balancing</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Monitoring & Logging</h4>
+                            <p>Application monitoring, error tracking</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Kubernetes (Optional)</h4>
+                            <p>Container orchestration for scaling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonus Skills -->
+            <div class="roadmap-phase">
+                <h2 class="phase-title">🎯 Bonus Skills (Ongoing)</h2>
+                <div class="skills-container">
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Microservices Architecture</h4>
+                            <p>Service-oriented design patterns</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Message Queues</h4>
+                            <p>RabbitMQ, Kafka for async processing</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>Mobile Development</h4>
+                            <p>React Native, Flutter for mobile apps</p>
+                        </div>
+                    </div>
+                    <div class="skill-item" onclick="toggleSkill(this)">
+                        <div class="skill-checkbox"></div>
+                        <div class="skill-content">
+                            <h4>System Design</h4>
+                            <p>Scalability, architecture patterns</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Full Stack Roadmap. Your journey to mastery starts here! 🚀</p>
+        </div>
+    </footer>
+
+    <script>
+        // Load saved progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem('roadmapProgress');
+            if (saved) {
+                const completed = JSON.parse(saved);
+                document.querySelectorAll('.skill-item').forEach((item, index) => {
+                    if (completed.includes(index)) {
+                        item.classList.add('completed');
+                    }
+                });
+            }
+            updateProgress();
+        }
+
+        // Toggle skill completion
+        function toggleSkill(element) {
+            element.classList.toggle('completed');
+            saveProgress();
+            updateProgress();
+        }
+
+        // Save progress to localStorage
+        function saveProgress() {
+            const completed = [];
+            document.querySelectorAll('.skill-item').forEach((item, index) => {
+                if (item.classList.contains('completed')) {
+                    completed.push(index);
+                }
+            });
+            localStorage.setItem('roadmapProgress', JSON.stringify(completed));
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const total = document.querySelectorAll('.skill-item').length;
+            const completed = document.querySelectorAll('.skill-item.completed').length;
+            const percent = Math.round((completed / total) * 100);
+            
+            document.getElementById('progress-percent').textContent = percent + '%';
+            document.getElementById('progress-fill').style.width = percent + '%';
+        }
+
+        // Reset all progress
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset all progress?')) {
+                localStorage.removeItem('roadmapProgress');
+                document.querySelectorAll('.skill-item').forEach(item => {
+                    item.classList.remove('completed');
+                });
+                updateProgress();
+            }
+        }
+
+        // Load progress on page load
+        window.addEventListener('load', loadProgress);
+    </script>
+</body>
+</html>
