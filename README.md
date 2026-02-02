@@ -1,30 +1,54 @@
-# Full Stack Developer Roadmap - Interactive Website
+# Gaurav's Complete Stack Blueprint - Interactive Website
 
-An interactive, engaging website featuring a complete Full Stack Development learning roadmap with progress tracking.
+An interactive, comprehensive learning roadmap featuring Frontend, Backend, AWS Cloud Computing, DevOps, and Cloud Security with progress tracking.
 
 ## ✨ Features
 
 ### Interactive Elements
-- **Flip Cards** on homepage - Click cards to see detailed tech stacks
+- **Flip Cards** on homepage - Click to reveal detailed tech stacks (5 domains)
 - **Animated Counters** - Statistics that count up when scrolled into view
 - **Progress Tracking** - Click skills to mark as completed (saves to browser)
 - **Real-time Progress Bar** - Visual representation of your learning journey
 - **Responsive Design** - Perfect on mobile, tablet, and desktop
+- **70+ Skills** - Comprehensive roadmap across all 5 phases
 
 ### Pages
-1. **Home** - Eye-catching hero with interactive flip cards
-2. **About** - Learn about the roadmap and learning phases
-3. **Roadmap** - Complete interactive roadmap with 30+ skills to track
-4. **Contact** - Get in touch form with community links
+1. **Home** - Eye-catching hero with 5 interactive flip cards showcasing the complete stack
+2. **About** - Detailed breakdown of all 5 phases with learning timelines
+3. **Roadmap** - Complete interactive roadmap with 70+ skills organized by phases
+4. **Contact** - Connect with the community and get mentorship
 
-## 🎯 Interactive Roadmap Features
+## 🎯 The Complete Stack - 5 Phases
 
-The roadmap page includes:
-- ✅ **Click to Complete** - Click any skill to mark it as learned
-- 📊 **Progress Tracking** - See your completion percentage
-- 💾 **Auto-Save** - Progress saved in your browser
-- 🔄 **Reset Option** - Start fresh anytime
-- 🎨 **Visual Feedback** - Completed skills turn green with checkmarks
+### 🎨 Phase 1: Frontend Development (3-4 months)
+- Foundation: HTML5, CSS3, JavaScript, Git, Responsive Design
+- Advanced: React.js, Next.js, TypeScript, Tailwind CSS, Testing, PWA
+- **Total Skills: 14**
+
+### ⚙️ Phase 2: Backend Development (3-4 months)
+- Node.js: Express.js, Nest.js, RESTful APIs, GraphQL
+- Python: Django, Flask, FastAPI, Django REST Framework
+- Databases: PostgreSQL, MySQL, MongoDB, Redis
+- **Total Skills: 16**
+
+### ☁️ Phase 3: AWS Cloud Computing (3-4 months)
+- Core: EC2, S3, RDS, Lambda, DynamoDB
+- Networking: VPC, Route 53, CloudFront, Load Balancer, API Gateway
+- Advanced: ECS/EKS, SNS/SQS, CloudWatch, CloudFormation
+- **Total Skills: 15**
+
+### 🔧 Phase 4: DevOps (2-3 months)
+- Containers: Docker, Docker Compose, Kubernetes, Helm
+- CI/CD: GitHub Actions, Jenkins, GitLab CI
+- IaC: Terraform, Ansible, CloudFormation
+- Monitoring: Prometheus, Grafana, ELK Stack, CloudWatch
+- **Total Skills: 14**
+
+### 🔒 Phase 5: Cloud Security (2-3 months)
+- AWS Security: IAM, Security Groups, WAF, GuardDuty, Security Hub, KMS
+- App Security: OWASP Top 10, SSL/TLS, Secrets Management, Encryption
+- DevSecOps: Security scanning, Vulnerability assessment, Compliance, Incident response
+- **Total Skills: 14**
 
 ## 🚀 How to Deploy on GitHub Pages (FREE)
 
@@ -63,8 +87,8 @@ After 1-2 minutes, your website will be live at:
 
 ## 🎨 Customization Guide
 
-### Change the Site Name
-Open all HTML files and replace "Full Stack Roadmap" with your desired name.
+### Change Your Name
+Open all HTML files and replace "Gaurav's" with your own name to personalize the blueprint.
 
 ### Change Colors
 Open `style.css` and modify these colors:
@@ -74,16 +98,17 @@ Open `style.css` and modify these colors:
 
 ### Customize the Roadmap
 Edit `roadmap.html` to:
-- Add or remove skills
-- Change learning phases
-- Modify phase descriptions
-- Add your own learning resources
+- Add or remove skills based on your learning path
+- Modify phase durations
+- Add your own resources and links
+- Customize sub-phases for your needs
 
 ### Add More Interactive Features
 The site uses vanilla JavaScript for interactivity:
 - Flip cards animation (index.html)
 - Counter animation (index.html)
 - Progress tracking with localStorage (roadmap.html)
+- All progress data is stored locally in the browser
 
 ### Update Content
 Edit the HTML files to change:

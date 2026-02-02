@@ -531,6 +531,14 @@ footer {
     border-bottom: 3px solid #667eea;
 }
 
+.sub-phase-title {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin: 2rem 0 1rem 0;
+    padding-left: 1rem;
+    border-left: 4px solid #667eea;
+}
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
