@@ -11,6 +11,7 @@ An interactive, comprehensive learning roadmap featuring Frontend, Backend, AWS 
 - **Real-time Progress Bar** - Visual representation of your learning journey
 - **Responsive Design** - Perfect on mobile, tablet, and desktop
 - **70+ Skills** - Comprehensive roadmap across all 5 phases
+- **Working Contact Form** - Integrated with Formspree to receive emails at gauravskt22@gmail.com
 
 ### Pages
 1. **Home** - Eye-catching hero with 5 interactive flip cards showcasing the complete stack
@@ -182,6 +183,19 @@ To update your website in the future:
 3. Click "Add file" > "Upload files"
 4. Upload the updated files
 5. Changes will be live in 1-2 minutes
+
+## 📧 Setting Up the Contact Form
+
+The contact form is ready to receive messages! Follow these quick steps:
+
+1. **Go to Formspree**: Visit https://formspree.io and sign up (FREE)
+2. **Verify Email**: Verify gauravskt22@gmail.com
+3. **Claim the Form**: Visit https://formspree.io/f/xdkogypz and click "Claim this form"
+4. **Done!** You'll receive emails when people contact you
+
+For detailed instructions, see `FORMSPREE_SETUP.md`
+
+**No setup required to test:** The form will work immediately, but you need to verify your email to receive messages.
 
 ## License
 Free to use and modify for personal or commercial projects.
